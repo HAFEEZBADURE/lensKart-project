@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-04T20:34:41 IST" name="Data Driven Basics" finished-at="2025-08-04T20:35:04 IST" duration-ms="23099">
+    <groups>
+    </groups>
+    <test started-at="2025-08-04T20:34:41 IST" name="EyeglassesTest Test" finished-at="2025-08-04T20:35:04 IST" duration-ms="23099">
+      <class name="com.w2a.testcases.EyeglassesTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.w2a.testcases.EyeglassesTest@3bd82cf5]" started-at="2025-08-04T20:34:31 IST" name="setup" finished-at="2025-08-04T20:34:41 IST" duration-ms="9842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="navigateToRectangleFrames()[pri:0, instance:com.w2a.testcases.EyeglassesTest@3bd82cf5]" started-at="2025-08-04T20:34:41 IST" name="navigateToRectangleFrames" finished-at="2025-08-04T20:35:04 IST" duration-ms="22944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToRectangleFrames -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.w2a.testcases.EyeglassesTest@3bd82cf5]" started-at="2025-08-04T20:35:04 IST" name="tearDown" finished-at="2025-08-04T20:35:05 IST" duration-ms="317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.w2a.testcases.EyeglassesTest -->
+    </test> <!-- EyeglassesTest Test -->
+  </suite> <!-- Data Driven Basics -->
+</testng-results>
