@@ -24,6 +24,7 @@ public class EyeglassesTest extends TestBase {
 		WebElement eyeglasses = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(OR.getProperty("Eyeglasses"))));
 		actions.moveToElement(eyeglasses).pause(Duration.ofSeconds(1)).perform();
+		System.out.println(eyeglasses.getText());
 
 		// Step 2: Wait and hover on "Men"
 		WebElement menOption = wait
@@ -45,22 +46,24 @@ public class EyeglassesTest extends TestBase {
 		rectangleFilter.click();
 		Thread.sleep(5000);
 
-		// Wait until product containers are visible
+		// Wait for all product containers to be visible
 		List<WebElement> products = wait.until(ExpectedConditions
-				.visibilityOfAllElementsLocatedBy(By.cssSelector(OR.getProperty("ProductDetailsContainer"))));
+		    .visibilityOfAllElementsLocatedBy(By.cssSelector("div.ProductContainer--13d10h3.irGigc")));
 
+		// Loop through first 10 or less products
 		int count = Math.min(products.size(), 10);
-
 		for (int i = 0; i < count; i++) {
-			WebElement product = products.get(i);
+		    WebElement product = products.get(i);
 
-			// Extract product name
-			String name = product.findElement(By.cssSelector(OR.getProperty("productname"))).getText();
+		    // Extract product name
+		    String productName = product.findElement(By.cssSelector("p[data-cy='plpProductTitle']")).getText();
 
-			// Extract product price
-			String price = product.findElement(By.cssSelector(OR.getProperty("productprice"))).getText();
-			System.out.println((i + 1) + ". " + name + " - " + price);
+		    // Extract price
+		    String productPrice = product.findElement(By.cssSelector("div[data-cy='plpOfferPrice']")).getText();
+
+		    System.out.println("Product " + (i + 1) + ": " + productName + " - " + productPrice);
 		}
+
 
 		Thread.sleep(3000);
 		// Step 1: Locate the dropdown element
@@ -72,6 +75,7 @@ public class EyeglassesTest extends TestBase {
 
 		Thread.sleep(3000);
 		System.out.println("Sorting by lowest price completed");
-		
+	
+
 	}
 }
